@@ -28,7 +28,7 @@ class CatController with ChangeNotifier {
   fetchData() async {
     isLoading = true;
     final url = Uri.parse(
-        "https://newsapi.org/v2/top-headlines?country=in&category=$category&apiKey=b3c465623333441cbf1f111d11e2b172");
+        "https://newsapi.org/v2/top-headlines?country=in&category=$category&apiKey=");
     print(category);
     final response = await http.get(url);
     print(response.statusCode);

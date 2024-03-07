@@ -12,7 +12,7 @@ class HomeController extends ChangeNotifier{
 
   fetchData() async {
     isLoading = true;
-    final url = "$baseUrl/v2/top-headlines?country=in&apiKey=b3c465623333441cbf1f111d11e2b172";
+    final url = "$baseUrl/v2/top-headlines?country=in&apiKey=";
     final response = await http.get(Uri.parse(url));
     print(response.statusCode);
 

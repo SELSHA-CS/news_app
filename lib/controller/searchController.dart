@@ -11,7 +11,7 @@ class SearchsController extends ChangeNotifier{
     isLoading = true;
     notifyListeners();
 
-    final url = Uri.parse("https://newsapi.org/v2/everything?q=$searchText&sortBy=popularity&apiKey=b3c465623333441cbf1f111d11e2b172");
+    final url = Uri.parse("https://newsapi.org/v2/everything?q=$searchText&sortBy=popularity&apiKey=");
     try{
       final response = await http.get(
         url,
