@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:news_app/constants/colors.dart';
+import 'package:news_app/controller/homeController.dart';
+import 'package:news_app/views/widgets/newsDetails.dart';
+import 'package:provider/provider.dart';
 
 class NewsCard extends StatelessWidget {
 
@@ -26,7 +29,7 @@ class NewsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: bgColor,
+      //color: scColor,
       elevation: 5,
       child: Container(
         padding: const EdgeInsets.all(15),
@@ -50,7 +53,19 @@ class NewsCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => NewsDet(
+                    title: title,
+                    description: description,
+                    img: img,
+                    date: date,
+                    content: content,
+                    sourceName: sourceName,
+                    url: url
+                  ))
+                );
+              },
               child: Column(
                 children: [
                   Text(title),
@@ -60,7 +75,10 @@ class NewsCard extends StatelessWidget {
                       Text("$sourceName | ${DateFormat('dd/MM/yyyy').format(date!).toString() ?? ""}"),
                       //IconButton(onPressed: (){}, icon: Icon(Icons.favorite)),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          String newsToShare = "$title \n \n $description \n \n $url";
+                          Provider.of<HomeController>(context, listen: false).shareText(textToShare: newsToShare);
+                        },
                         icon: const Icon(Icons.share, color: scColor,)
                       ),
                     ],

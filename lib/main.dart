@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/controller/barController.dart';
 import 'package:news_app/controller/catController.dart';
 import 'package:news_app/controller/homeController.dart';
+import 'package:news_app/controller/searchController.dart';
 import 'package:news_app/controller/themeController.dart';
 import 'package:news_app/views/SplashScreen/spalshScreen.dart';
 import 'package:provider/provider.dart';
@@ -14,6 +15,7 @@ void main() {
           ChangeNotifierProvider(create: (context) => HomeController()),
           ChangeNotifierProvider(create: (context) => ThemeProvider()),
           ChangeNotifierProvider(create: (context) => CatController()),
+          ChangeNotifierProvider(create: (context) => SearchsController())
         ],
       child: MyApp(),
     ),
