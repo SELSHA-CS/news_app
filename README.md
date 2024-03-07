@@ -5,10 +5,10 @@
     <img src="https://github.com/SELSHA-CS/news_app/assets/142321043/9a9dafc4-a2dc-41b8-8e23-ac52c5c8361a" alt="Screenshot 5" width="30%">
     <img src="https://github.com/SELSHA-CS/news_app/assets/142321043/e40ce3c6-2d54-4e42-b34d-7482e6c104d4" alt="Screenshot 6" width="30%">
     <video width="30%">
-        <source src="" type="video/mp4">
+        <source src="https://github.com/SELSHA-CS/news_app/assets/142321043/95726f22-e885-4021-93aa-685836dabbbb" type="video/mp4">
     </video> 
     
-
+https://github.com/SELSHA-CS/news_app/assets/142321043/95726f22-e885-4021-93aa-685836dabbbb
 
 
 </div>
